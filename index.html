@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A & M Corporation provides end-to-end execution support for DDU-GKY and other skill development projects across India.">
+  <meta name="theme-color" content="#102e73">
+  <link rel="icon" type="image/png" href="am-logo.png">
+  <title>A & M Corporation | Skill Development Project Execution</title>
+  <style>
+    :root{--navy:#102e73;--blue:#123e96;--teal:#e30613;--ink:#243b53;--muted:#627d98;--pale:#f3f7fb;--white:#fff;--line:#d9e2ec;--gold:#f4b942}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit} .container{width:min(1140px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:800;letter-spacing:.02em}
+    .brand-mark{display:grid;place-items:center;width:45px;height:45px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-size:17px;box-shadow:0 8px 20px #123e962b}
+    .brand small{display:block;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    nav{display:flex;align-items:center;gap:24px}nav a{text-decoration:none;font-size:13px;font-weight:700;color:#486581}nav a:hover{color:var(--blue)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;padding:12px 18px;text-decoration:none;font-weight:750;font-size:14px;transition:.2s}
+    .nav-cta,.btn-primary{background:var(--blue);color:white;border:1px solid var(--blue)}.nav-cta:hover,.btn-primary:hover{background:#0d568f;transform:translateY(-1px)}
+    .btn-light{background:#fff;color:var(--navy);border:1px solid #d9e2ec}.btn-light:hover{border-color:var(--blue)}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#102e73 0%,#153c8e 58%,#b60618 100%);color:#fff;padding:90px 0 82px}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff18;border-radius:50%;pointer-events:none}.hero:before{width:550px;height:550px;right:-120px;top:-220px}.hero:after{width:360px;height:360px;right:10px;top:-115px}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:54px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:800;color:#ffb5bb}.eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+    h1{font-size:clamp(36px,5vw,61px);line-height:1.08;letter-spacing:-.04em;margin:19px 0 20px;max-width:760px}
+    .hero p{font-size:17px;color:#d7e8f3;max-width:690px;margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero .btn-light{background:#ffffff12;color:#fff;border-color:#ffffff45}.hero .btn-light:hover{background:#ffffff20}
+    .hero-card{border:1px solid #ffffff30;background:#ffffff12;border-radius:18px;padding:27px;backdrop-filter:blur(8px)}
+    .hero-card .mini-label{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#ffc0c6;font-weight:800}
+    .hero-card h2{font-size:22px;line-height:1.25;margin:10px 0 20px;color:#fff}
+    .hero-point{display:flex;gap:11px;align-items:flex-start;padding:13px 0;border-top:1px solid #ffffff20;color:#e1edf5;font-size:14px}
+    .check{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#e3061333;color:#ffb5bb;font-weight:900}
+    .stats{background:#fff;border-bottom:1px solid var(--line)}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0}
+    .stat{padding:6px 28px;border-right:1px solid var(--line)}.stat:first-child{padding-left:0}.stat:last-child{border:0}
+    .stat strong{display:block;color:var(--navy);font-size:24px;line-height:1.2}.stat span{font-size:12px;color:var(--muted);font-weight:650}
+    section{padding:78px 0}.section-head{max-width:730px;margin-bottom:34px}.kicker{color:var(--blue);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:850}
+    h2.section-title{font-size:clamp(28px,3vw,40px);line-height:1.15;letter-spacing:-.03em;color:var(--navy);margin:9px 0 13px}
+    .section-head p{color:var(--muted);margin:0;font-size:16px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .about-copy p{margin-top:0;color:#486581}.mission-card{background:var(--pale);border:1px solid var(--line);border-radius:15px;padding:25px}
+    .mission-card h3{margin:0 0 8px;color:var(--navy)}.mission-card p{margin:0 0 20px;color:var(--muted);font-size:14px}.mission-card p:last-child{margin-bottom:0}
+    .services{background:var(--pale)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 4px 18px #102e7308;transition:.2s}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #102e7310;border-color:#b7d4e9}
+    .icon{width:43px;height:43px;border-radius:11px;background:#e8f4fb;color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:16px}
+    .card h3{font-size:17px;line-height:1.3;color:var(--navy);margin:0 0 9px}.card p{font-size:13px;color:var(--muted);margin:0}
+    .states-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
+    .states-panel{background:var(--navy);color:#fff;padding:28px;border-radius:16px}.states-panel h3{margin:0 0 10px;font-size:21px}.states-panel p{color:#c6d8e6;font-size:14px;margin:0}
+    .state-list{display:flex;flex-wrap:wrap;gap:9px}.state{border:1px solid var(--line);background:#fff;border-radius:100px;padding:8px 13px;font-size:13px;color:#334e68;font-weight:650}
+    .framework{background:linear-gradient(180deg,#f3f7fb,#fff)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{border-top:3px solid var(--teal);background:#fff;border-radius:0 0 12px 12px;padding:20px 18px;box-shadow:0 5px 20px #102e7308}
+    .step-num{color:var(--teal);font-size:12px;letter-spacing:.1em;font-weight:900}.step h3{font-size:16px;color:var(--navy);margin:8px 0}.step p{font-size:13px;color:var(--muted);margin:0}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.why-item{padding:5px 0}.why-item h3{color:var(--navy);font-size:17px;margin:0 0 7px}.why-item p{color:var(--muted);font-size:14px;margin:0}
+    .partner-band{background:#eaf5fa;border-top:1px solid #d9edf5;border-bottom:1px solid #d9edf5;padding:42px 0}
+    .partner-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}.partner-inner h2{color:var(--navy);font-size:26px;line-height:1.2;margin:0 0 7px}.partner-inner p{color:var(--muted);margin:0}
+    .contact{background:var(--navy);color:#fff}.contact .section-title{color:#fff}.contact .section-head p{color:#c6d8e6}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}
+    .contact-info{display:grid;gap:13px}.contact-line{display:flex;gap:13px;align-items:flex-start;padding:17px;border:1px solid #ffffff25;border-radius:12px;background:#ffffff08}
+    .contact-line .icon{margin:0;background:#ffffff15;color:#ffb5bb}.contact-line strong{display:block;font-size:13px;color:#ffc0c6}.contact-line a,.contact-line span{font-size:14px;color:#fff;text-decoration:none;overflow-wrap:anywhere}
+    .contact-box{background:#fff;color:var(--ink);border-radius:16px;padding:28px}.contact-box h3{color:var(--navy);font-size:22px;margin:0 0 8px}.contact-box p{font-size:14px;color:var(--muted);margin:0 0 20px}.contact-box .btn{width:100%;margin-top:9px}
+    footer{background:#091f4c;color:#a9bfd0;padding:22px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:850px){nav{gap:12px}nav a:not(.nav-cta){display:none}.hero-grid,.about-grid,.states-wrap,.contact-grid{grid-template-columns:1fr}.hero{padding:65px 0}.hero-card{max-width:560px}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}.partner-inner{align-items:flex-start;flex-direction:column}}
+    @media(max-width:540px){.nav{min-height:68px}.brand-mark{width:39px;height:39px}.brand{font-size:14px}.nav-cta{padding:10px 12px;font-size:12px}.hero{padding:52px 0}.hero p{font-size:15px}.stats-grid{grid-template-columns:1fr;padding:10px 0}.stat,.stat:first-child{padding:13px 0;border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.stat strong{font-size:21px}section{padding:58px 0}.cards,.steps,.why-grid{grid-template-columns:1fr}.card{padding:21px}.partner-inner h2{font-size:23px}}
+    .brand-logo{width:66px;height:60px;object-fit:contain;flex:none}.brand{gap:9px}.brand small{letter-spacing:.07em}
+    .hero{background:linear-gradient(112deg,#091f4c 0%,#102e73 67%,#c20b1c 150%)}
+    .hero-photo{width:100%;border-radius:16px;display:block;box-shadow:0 20px 50px #06183c55;border:5px solid #ffffff20}
+    .hero-visual{display:grid;gap:16px}.hero-card{padding:18px 22px}.hero-card h2{font-size:19px;margin:6px 0 9px}.hero-point{padding:8px 0}
+    .gallery{background:#f4f7fd}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.gallery-item{background:#fff;border:1px solid #d9e2ec;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px #102a430d}.gallery-item img{width:100%;aspect-ratio:800/520;object-fit:cover;display:block}.gallery-copy{padding:20px}.gallery-copy h3{font-size:18px;line-height:1.25;color:#102e73;margin:0 0 6px}.gallery-copy p{color:#627d98;font-size:13px;margin:0}
+    @media(max-width:850px){.gallery-grid{grid-template-columns:1fr 1fr}}@media(max-width:540px){.gallery-grid{grid-template-columns:1fr}.brand-logo{width:48px;height:48px}.brand{font-size:12px}}
+
+    .leadership{background:#fff}.leader-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}.leader-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 12px 30px #102e7310}.leader-photo{width:100%;height:340px;object-fit:cover;object-position:center 28%;display:block;background:#edf1f8}.leader-card:first-child .leader-photo{object-position:center 35%}.leader-body{padding:27px}.leader-role{color:#c20b1c;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:800}.leader-body h3{color:var(--navy);font-size:25px;line-height:1.2;margin:6px 0 12px}.leader-body p{color:#486581;font-size:14px;margin:0}.leader-note{color:var(--muted);font-size:12px;margin-top:20px}@media(max-width:700px){.leader-grid{grid-template-columns:1fr}.leader-photo{height:320px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="A and M Corporation home">
+      <img class="brand-logo" src="am-logo.png" alt="A &amp; M Corporation official logo">
+      <span>A &amp; M CORPORATION<small>Project Execution &amp; Management</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#project-activities">Activities</a><a href="#leadership">Leadership</a><a href="#presence">Our Presence</a><a href="#contact">Contact</a>
+      <a class="nav-cta" href="#contact">Partner With Us ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Skill Development Project Execution</div>
+        <h1>Turning Skill Development Plans Into On-Ground Results.</h1>
+        <p>A trusted execution partner for DDU-GKY and other skill development projects — supporting the complete journey from training centre readiness to placement tracking and installment coordination.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Discuss Your Project <span aria-hidden="true">→</span></a>
+          <a class="btn btn-light" href="#services">Explore Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual"><img class="hero-photo" src="training.svg" alt="Illustration of vocational skill development classroom training" loading="eager"><aside class="hero-card">
+        <div class="mini-label">One partner. End-to-end support.</div>
+        <h2>Operational support across the project lifecycle.</h2>
+        <div class="hero-point"><span class="check">✓</span><span>Centre readiness and mobilization</span></div>
+        <div class="hero-point"><span class="check">✓</span><span>Training operations and compliance coordination</span></div>
+        <div class="hero-point"><span class="check">✓</span><span>Placement, tracking and SRLM follow-up</span></div>
+      </aside></div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="container stats-grid">
+      <div class="stat"><strong>12+ Years</strong><span>Experience in skilling project execution</span></div>
+      <div class="stat"><strong>Multi-State</strong><span>Operational experience across India</span></div>
+      <div class="stat"><strong>End-to-End</strong><span>Support from readiness to tracking</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Who We Are</div>
+        <h2 class="section-title">Execution expertise built on real operational experience.</h2>
+        <p>A &amp; M Corporation supports organizations delivering government-supported skill development initiatives with structured, milestone-oriented project execution.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>With more than 12 years of experience in DDU-GKY and other skilling projects, A &amp; M Corporation understands the operational requirements, coordination needs and implementation challenges involved in delivering projects on the ground.</p>
+          <p>We work alongside Project Implementing Agencies (PIAs), training teams, employers and relevant stakeholders to coordinate activities throughout the project lifecycle — from establishing centre readiness and managing training operations to placement coordination, post-placement tracking and documentation follow-up.</p>
+          <p>Our focus is on dependable execution, clear reporting and consistent coordination, helping partner organizations manage project activities systematically.</p>
+        </div>
+        <div class="mission-card">
+          <h3>Our Vision</h3>
+          <p>To be a trusted nationwide execution partner for skill development initiatives that create sustainable employment opportunities and strengthen India's workforce.</p>
+          <h3>Our Mission</h3>
+          <p>To deliver structured project execution, support PIAs in achieving operational milestones, strengthen training and placement processes, and facilitate systematic documentation and coordination.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="project-activities"><div class="container"><div class="section-head"><div class="kicker">DDU-GKY Project Activities</div><h2 class="section-title">From candidate outreach to sustainable employment.</h2><p>Visual overview of the key activities we support in government skill development project execution.</p></div><div class="gallery-grid"><article class="gallery-item"><img src="mobilization.svg" alt="Illustration of candidate counselling and mobilization" loading="lazy"><div class="gallery-copy"><h3>Mobilization &amp; Counselling</h3><p>Candidate outreach, eligibility guidance and enrolment coordination.</p></div></article><article class="gallery-item"><img src="training.svg" alt="Illustration of vocational classroom skill training" loading="lazy"><div class="gallery-copy"><h3>Skill Training &amp; Centre Operations</h3><p>Classroom learning, practical training, trainer and batch coordination.</p></div></article><article class="gallery-item"><img src="placement.svg" alt="Illustration of placement and employer engagement" loading="lazy"><div class="gallery-copy"><h3>Placement &amp; Tracking</h3><p>Employer engagement, candidate joining and post-placement follow-up.</p></div></article></div><p style="font-size:12px;color:#627d98;margin-top:14px">Images are illustrative representations of project activities, not photographs of specific A &amp; M Corporation centres or candidates.</p></div></section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">What We Do</div>
+        <h2 class="section-title">Complete skill development project execution.</h2>
+        <p>Flexible operational support for PIAs and organizations implementing DDU-GKY and other skill development projects.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">⌂</div><h3>Centre Readiness &amp; Infrastructure</h3><p>Centre identification and readiness coordination, classrooms, labs, offices, hostel facilities, equipment and pre-launch planning.</p></article>
+        <article class="card"><div class="icon">◎</div><h3>Mobilization &amp; Enrollment</h3><p>Outreach planning, candidate counselling, screening, enrollment documentation and onboarding coordination.</p></article>
+        <article class="card"><div class="icon">▤</div><h3>Training Operations</h3><p>Centre operations, trainer and batch coordination, schedules, attendance, assessment coordination, MIS and reporting.</p></article>
+        <article class="card"><div class="icon">✓</div><h3>Compliance &amp; Quality Support</h3><p>Project documentation, inspection and audit coordination, quality requirements and corrective-action follow-up.</p></article>
+        <article class="card"><div class="icon">↗</div><h3>Placement Coordination</h3><p>Employer engagement, interview scheduling, joining documentation and candidate placement status monitoring.</p></article>
+        <article class="card"><div class="icon">◷</div><h3>Post-Placement Tracking</h3><p>Joining verification, candidate and employer follow-up, retention coordination and tracking records.</p></article>
+        <article class="card"><div class="icon">▣</div><h3>SRLM &amp; Installment Follow-up</h3><p>Milestone documentation, submission coordination and follow-up with the concerned SRLM on installment processing.</p></article>
+        <article class="card"><div class="icon">⇄</div><h3>Project Coordination</h3><p>Coordination among PIAs, training teams, employers and other stakeholders to maintain continuity across project stages.</p></article>
+        <article class="card"><div class="icon">▥</div><h3>MIS &amp; Operational Reporting</h3><p>Organized project records, operational updates and milestone-oriented reporting to support informed management.</p></article>
+      </div>
+      <p style="font-size:12px;color:#627d98;margin:20px 0 0">Our role is to facilitate execution, documentation and follow-up. Government approvals, assessments and installment releases remain with the concerned authorities.</p>
+    </div>
+  </section>
+
+  <section id="presence">
+    <div class="container states-wrap">
+      <div>
+        <div class="kicker">Our Geographic Experience</div>
+        <h2 class="section-title">Multi-state experience. Local execution understanding.</h2>
+        <p style="color:#627d98">Our experience across diverse regions helps us understand differing local mobilization needs, operating environments and training centre requirements.</p>
+      </div>
+      <div>
+        <div class="states-panel"><h3>Experience across India</h3><p>States where we have experience include:</p></div>
+        <div class="state-list" style="margin-top:16px">
+          <span class="state">Jammu &amp; Kashmir</span><span class="state">Himachal Pradesh</span><span class="state">Punjab</span><span class="state">Uttar Pradesh</span><span class="state">Madhya Pradesh</span><span class="state">Chhattisgarh</span><span class="state">Jharkhand</span><span class="state">Bihar</span><span class="state">Maharashtra</span><span class="state">Assam</span><span class="state">West Bengal</span><span class="state">Rajasthan</span><span class="state">And other states</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">How We Work</div>
+        <h2 class="section-title">A structured execution framework.</h2>
+        <p>Coordinated project support from initial planning through employment tracking and documentation follow-up.</p>
+      </div>
+      <div class="steps">
+        <article class="step"><div class="step-num">STEP 01</div><h3>Project Planning</h3><p>Understand project scope, targets, timelines and applicable requirements.</p></article>
+        <article class="step"><div class="step-num">STEP 02</div><h3>Centre Readiness</h3><p>Coordinate infrastructure, facilities, staffing and operational preparedness.</p></article>
+        <article class="step"><div class="step-num">STEP 03</div><h3>Mobilization &amp; Training</h3><p>Support candidate onboarding, training delivery, batch operations and records.</p></article>
+        <article class="step"><div class="step-num">STEP 04</div><h3>Assessment &amp; Placement</h3><p>Coordinate assessment processes, employer engagement and candidate placement.</p></article>
+        <article class="step"><div class="step-num">STEP 05</div><h3>Placement Tracking</h3><p>Follow up on joining, employment status and required tracking records.</p></article>
+        <article class="step"><div class="step-num">STEP 06</div><h3>Documentation</h3><p>Compile and coordinate project milestone documentation and submissions.</p></article>
+        <article class="step"><div class="step-num">STEP 07</div><h3>SRLM Follow-up</h3><p>Coordinate with relevant stakeholders regarding pending requirements and installments.</p></article>
+        <article class="step"><div class="step-num">OUR FOCUS</div><h3>Continuity &amp; Accountability</h3><p>Clear responsibilities, systematic reporting and consistent operational coordination.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Why A &amp; M Corporation</div>
+        <h2 class="section-title">A dependable partner for on-ground execution.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><h3>12+ Years of Experience</h3><p>Practical experience in DDU-GKY and other skill development project execution.</p></div>
+        <div class="why-item"><h3>End-to-End Support</h3><p>Operational coordination across the full project lifecycle, not just one stage.</p></div>
+        <div class="why-item"><h3>Multi-State Exposure</h3><p>Experience across different regions, local contexts and operating environments.</p></div>
+        <div class="why-item"><h3>Structured Management</h3><p>Milestone-focused planning, records, monitoring and operational reporting.</p></div>
+        <div class="why-item"><h3>Placement-Focused</h3><p>Coordination around employer engagement, joining and post-placement follow-up.</p></div>
+        <div class="why-item"><h3>Stakeholder Coordination</h3><p>Practical coordination with PIAs, teams, employers and relevant authorities.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="leadership" id="leadership">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Our Leadership</div>
+        <h2 class="section-title">Meet our Directors</h2>
+        <p>Leadership focused on execution quality, operational discipline and sustainable employment outcomes in India's skill development ecosystem.</p>
+      </div>
+      <div class="leader-grid">
+        <article class="leader-card">
+          <img class="leader-photo" src="abhinav-tiwari.jpg" alt="Abhinav Tiwari, Director of A &amp; M Corporation" loading="lazy">
+          <div class="leader-body"><div class="leader-role">Director</div><h3>Abhinav Tiwari</h3><a href="https://www.linkedin.com/in/abhinavtiwari06/" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin:0 0 12px;color:#17458b;font-weight:700;text-decoration:underline">View LinkedIn profile ↗</a>
+          <p>Abhinav Tiwari is a skill development and corporate engagement professional associated with HopingMinds, with an academic background at NIMS University (2011–2013). His work spans industry partnerships, corporate relations, skilling initiatives and placement-focused programmes. At A &amp; M Corporation, he focuses on building collaborations and connecting training delivery with employment opportunities.</p></div>
+        </article>
+        <article class="leader-card">
+          <img class="leader-photo" src="prakash-gautam.jpg" alt="Prakash Gautam, Director of A &amp; M Corporation" loading="lazy">
+          <div class="leader-body"><div class="leader-role">Director · 15 Years of Experience</div><h3>Prakash Gautam</h3>
+          <p>Prakash has 15 years of experience in the skilling sector, with a core focus on project operations and Management Information Systems (MIS). His expertise spans operational coordination, data and documentation processes, progress monitoring, reporting and the systems needed for effective implementation of skill development projects.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="partner-band">
+    <div class="container partner-inner">
+      <div><h2>Looking for a project execution partner?</h2><p>Let's discuss your project scope, centre readiness and multi-state execution requirements.</p></div>
+      <a class="btn btn-primary" href="#contact">Contact A &amp; M Corporation →</a>
+    </div>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Contact Us</div>
+        <h2 class="section-title">Let's execute skill development projects together.</h2>
+        <p>Connect with us to discuss DDU-GKY and other skill development project requirements, operational support and multi-state execution.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-line"><div class="icon">☎</div><div><strong>Call Us</strong><a href="tel:+917696001117">76960 01117</a><br><a href="tel:+919713956662">97139 56662</a></div></div>
+          <div class="contact-line"><div class="icon">✉</div><div><strong>Email</strong><a href="mailto:finance@anmcorp.in">finance@anmcorp.in</a></div></div>
+          <div class="contact-line"><div class="icon">⌖</div><div><strong>Office Address</strong><span>2nd Floor, Vijay Tower, Industrial Area Phase 8-B, Mohali</span></div></div>
+          <div class="contact-line"><div class="icon">◎</div><div><strong>Website</strong><a href="https://anmcorp.in">anmcorp.in</a></div></div>
+        </div>
+        <div class="contact-box">
+          <h3>Partner With Us</h3>
+          <p>Have a project to execute or looking for operational support? Send us an email and our team can follow up with you.</p>
+          <a class="btn btn-primary" href="mailto:finance@anmcorp.in?subject=Skill%20Development%20Project%20Execution%20Enquiry">Email Our Team ↗</a>
+          <a class="btn btn-light" href="https://wa.me/917696001117?text=Hello%20A%20%26%20M%20Corporation%2C%20I%20would%20like%20to%20discuss%20a%20skill%20development%20project." target="_blank" rel="noopener">Contact on WhatsApp ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year">2026</span> A &amp; M Corporation. All rights reserved.</span>
+    <span>Skill Development Project Execution &amp; Management</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
